@@ -1,0 +1,28 @@
+﻿@page
+@model CourseModel
+@{
+
+    ViewData["Title"] = "Courses";
+
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Popular Courses This Week</p>
+@{ var courses = new List<string>()
+{
+           "Data Security",
+       "Data Science",
+       "Machine Learning"
+         };
+
+<ul>
+    @foreach (string course in courses)
+    {
+        <li>
+            @course
+        </li>
+    }
+
+
+</ul>
+    }
